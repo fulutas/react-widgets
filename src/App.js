@@ -1,0 +1,38 @@
+import React from "react";
+
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Route from "./components/Route";
+import ColorSelect from "./components/ColorSelect";
+import Translate from "./components/Translate";
+import Accordion from "./components/Accordion";
+import Search from "./components/Search";
+
+export default () => {
+  return (
+    <div className="ui container">
+      <Header />
+      <Route path="/">
+        <Home />
+      </Route>
+      <Route path="/accordion">
+        <Accordion />
+      </Route>
+      <Route path="/color-select">
+        <ColorSelect />
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
+      <Route path="/search">
+        <Search />
+      </Route>
+      <Route path="/all">
+        <Accordion />
+        <ColorSelect />
+        <Translate />
+        <Search />
+      </Route>
+    </div>
+  );
+};
